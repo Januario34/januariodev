@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{ margin: 0; padding: 0; font-size: 100%; border: none; outline: none; font-weight: 300; box-sizing: border-box;}
+a{text-decoration: none;}
+ul{list-style: none;}
+img{max-width: 100%;}
+
+body{
+  background-color: black;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+}
+
+
+html{
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+/* scroll */
+html::-webkit-scrollbar{
+width: 0.2vw;
+}
+
+html::-webkit-scrollbar-thumb{
+  background-color: orange;
+  border-radius: 8px;
+
+}
+
+/* Navbar */
+
+section#main-1{
+  color: orange;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url('/img/2.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  overflow: hidden;
+}
+section#main-1 div#text-1{
+  width: 100%;
+  padding-left: 20px;
+}
+
+@media (max-width: 600px) {
+  section#main-1{
+  background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.8)),url('/img/1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  max-width: 100%;
+  }
+
+  section#main-1 div#text-1{
+    width: 100%;
+    padding-top: 30px;
+   
+  }
+
+  section#main-1 div#text-1 h1{
+    font-size: 2rem;
+    padding-top: 600px;
+    line-height: 1.2;
+  }
+  section#main-1 div#text-1 h2{
+    font-size: 1.4rem;
+    padding: 5px;
+
+
+  }
+
+  section#main-1 div#text-1 div#seta{
+    display: none;
+  }
+
+}
+
+section#main-1 h1{
+  font-size: 3rem;
+  line-height: 4rem;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+section#main-1 h2{
+  font-size: 1.4rem;
+  color: white;
+  padding-top: 20px;
+  text-transform: uppercase;
+}
+
+/* seta */
+section#main-1 div#text-1 div#seta{
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+section#main-1 div#text-1  div#seta span.seta{
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+  animation: animate 3s infinite;
+  margin: -19px;
+}
+
+section#main-1 div#text-1  div#seta span.seta:nth-child(1){
+  animation-delay: -0.2s;
+  transform: rotate(45deg) translate(-20px, -20px);
+}
+
+section#main-1 div#text-1  div#seta span.seta:nth-child(2){
+  animation-delay: -0.1s;
+}
+
+section#main-1 div#text-1  div#seta span.seta:last-child{
+  border-bottom: 2px solid orange;
+  border-right: 2px solid orange;
+}
+
+
+
+/* animação seta */
+@keyframes animate{
+  0%{
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px, -20px);
+  }
+
+  50%{
+      opacity: 1;
+      tansform: rotate(45deg) translate(-20px, -20px);
+  }
+  100%{
+      opacity: 0;
+      transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+/* animacao texto seta */
+@keyframes animate2{
+  0%{
+      opacity: 0;
+      transform:  translateY(10px);
+  }
+
+  50%{
+      opacity: 0;
+      transform: translateY(15px);
+  }
+  65%{
+      opacity:1;
+      transform: translateY(30px);
+      color: #ffd269d7;
+  }
+  100%{
+      opacity:0;
+      transform: translateY(30px);
+  }
+}
+
+
+section.default-main{
+  width: 100%;
+  height: auto;
+  background-color: rgb(0, 0, 0);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+section.default-main h1#servicos{
+  font-size: 1.7rem;
+  color: orange;
+  text-align: center;
+}
+
+section.default-main p{
+  color: white;
+  padding-top: 20px;
+  font-size: 1.3rem;
+}
+
+section.default-main div#cards{
+  flex-direction: row;
+  display: flex; 
+  width: 100%;
+  height: 80vh;
+  align-items: center;
+  justify-content: space-around;
+}
+section.default-main div.card{
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  color: black;
+  text-align: center;
+  padding: 20px;
+}
+section.default-main div.card h1{
+  font-size: 1.8rem;
+  color: orange;
+  text-transform: uppercase;
+}
+
+section.default-main div.card p{
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+
+@media (max-width:600px) {
+  section.default-main div#cards{
+    flex-direction: column;
+    padding-top: 20px;
+    margin-bottom: -30%;
+    margin-top: 100px;
+  }
+  section.default-main div.card{
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  section.default-main h1{
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+  }
+}
+
+/* Sobre mim */
+
+section#sobre-min{
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  justify-content: center;
+  padding-bottom: 20px;
+}
+section#sobre-min div#texto{
+  height: 90%;
+  width: 70%;
+  display: flex;
+  padding-left: 20px;
+
+}
+
+section#sobre-min div#texto h1{
+  text-transform: uppercase;
+  text-align: center;
+  color: orange;
+  font-size: 2.7rem;
+}
+
+section#sobre-min div#texto p{
+  color: aliceblue;
+  font-size: 1.4rem;
+  padding-top: 40px;
+  text-align: left;
+  padding-right: 30px;
+}
+
+section#sobre-min div#lista-dados{
+  width: 30%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+section#sobre-min div#lista-dados h1{
+  color: #fff;
+  font-size: 2.7rem;
+
+}
+
+section#sobre-min div#lista-dados ul{
+  padding-bottom: 20px;
+}
+
+section#sobre-min div#lista-dados ul li{
+  color: orange;
+  padding-top: 20px;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 600px) {
+  section#sobre-min {
+    flex-direction: column-reverse;
+    height: auto;
+    max-width: 100%;
+    padding-bottom: 40px;
+  }
+  section#sobre-min div#texto{
+    width: 100%;
+    padding-left: 20px;
+
+  }
+  section#sobre-min div#lista-dados{
+    width: 100%;
+    padding-top: 30px;
+    justify-content: left;
+  }
+
+  section#sobre-min div#texto p{
+    padding-top: 30px;
+    text-align: left;
+    font-size: 1.3rem;
+    padding-bottom: 30px;
+  }
+
+  section#sobre-min div#lista-dados h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+    
+  }
+  section#sobre-min div#texto h1{
+    padding-top: 40px;
+    font-size: 1.7rem;
+    text-align: left;
+    color: white;
+    display: none;
+  }
+}
+
+
+/* habilidades */
+
+section#habilidades{
+  min-width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 50px;
+}
+
+
+
+@media (max-width: 600px) {
+  section#habilidades{
+    flex-direction: column;
+  }
+  section#habilidades div#programacao{
+   min-width: 100%;
+   justify-content: left;
+   padding-top: 150px;
+  }
+
+  section#habilidades div#programacao h1#prog{
+    font-size: 1.5rem;
+    color: orange;
+    text-transform: uppercase;
+    padding-top: 250px;
+    padding-bottom: 20px;
+    text-align: center;
+    padding-left: 10px;
+  }
+
+  div#habilidades-pessoais{
+    width: 100%;
+    min-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.1rem;
+    padding-top: 30px;
+  }
+  section#habilidades div#habilidades-pessoais{
+    max-width: 100%;
+    height: auto;
+    justify-self: left;
+    text-align: left;
+    padding-top: 100px;
+    font-size: 1.3rem;
+    
+    padding-bottom: 40px;
+  }
+  section#habilidades div#habilidades-pessoais h1{
+    text-align: center;
+    padding-top: 100px;
+    font-size: 1.4rem;
+  }
+
+  section#habilidades div#habilidades-pessoais ul li{
+    font-size: 0.6rem;
+    color: #cc4949;
+  }
+  .skill{
+    width: 100%;
+  
+  }
+  div#contacto{
+    width: 100%;
+    height: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+  }
+}
+
+section#habilidades div#programacao{
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section#habilidades div#programacao h1{
+  font-size: 2rem;
+  color: orange;
+  text-transform: uppercase;
+  
+}
+
+section#habilidades div#habilidades-pessoais{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  
+}
+
+section#habilidades div#habilidades-pessoais ul{
+  padding-bottom: 30px;
+}
+
+section#habilidades div#habilidades-pessoais ul li{
+  color: rgb(255, 255, 255);
+  padding-top: 20px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+div#habilidades-pessoais h1{
+  font-size: 1.5rem;
+  color: orange;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+
+.skill{
+  width: 80%;
+
+}
+.skill-name{
+  font-size: 18px;
+  font-weight: 700;
+  color: #f1f1f1;
+  text-transform: uppercase;
+  margin: 20px 0;
+  font-family: 'Bebas Neue';
+  letter-spacing: .2rem;
+  
+}
+
+.skill-bar{
+  height: 14px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 3px;
+}
+
+.skill-per{
+  height: 14px;
+  background-color: orange;
+  border-radius: 3px;
+}
